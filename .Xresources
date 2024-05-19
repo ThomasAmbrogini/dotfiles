@@ -1,0 +1,77 @@
+! Support for 256 colors. Might create problems for remote connection if the
+! terminal from which you are connecting does not support the 256 colors
+xterm*termName: xterm-256color
+
+! Force xterm to use utf-8 even if the locale is different
+! This might be mandatory, since xterm does not support all the utf-8 locales
+xterm*locale: false
+xterm*utf8: true 
+
+! Specifies that the used shell is a login shell
+xterm*loginshell: true
+
+xterm*savelines: 16384
+
+! Chatacters which are treated the same during copy-paste
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+xterm*rightScrollBar: false
+xterm*ScrollBar: false
+xterm*scrollTtyOutput: true 
+
+xterm*internalBorder: 17
+
+! Font
+
+xterm*renderFont: true
+xterm*faceName: JuliaMonoNerdFontMono
+xterm*faceSize: 14
+
+! Scale height because some glyphs can report problems with default height
+xterm*scaleHeight: 1.01
+
+xterm*allowBoldFonts: true
+! disable bold font faces, instead make text light blue.
+!xterm*colorBDMode: true 
+!xterm*colorBD: rgb:82/a4/d3
+! disable underlined text, instead make it white.
+!xterm*colorULMode: true
+!xterm*colorUL: rgb:e4/e4/e4
+! disable italic text, isntead make it red
+!xterm*colorITMode: true
+!xterm*colorIT: rgb:dc/14/3c
+
+! Colors
+
+! By not specifying xterm for the color, all the applications using xlib will
+! be unified, using the same color
+*foreground: rgb:a8/a8/a8
+*background: rgb:14/10/12
+
+xterm*color0: rgb:00/00/00
+xterm*color1: rgb:a8/00/00
+xterm*color2: rgb:00/a8/00
+xterm*color3: rgb:a8/54/00
+xterm*color4: rgb:00/00/a8
+xterm*color5: rgb:a8/00/a8
+xterm*color6: rgb:00/a8/a8
+xterm*color7: rgb:a8/a8/a8
+xterm*color8: rgb:54/54/54
+xterm*color9: rgb:fc/54/54
+xterm*color10: rgb:54/fc/54
+xterm*color11: rgb:fc/fc/54
+xterm*color12: rgb:54/54/fc
+xterm*color13: rgb:fc/54/fc
+xterm*color14: rgb:54/fc/fc
+xterm*color15: rgb:fc/fc/fc
+
+! Key bindings
+
+! Remap to copy and paste with <Ctrl> <Shift> <C>/<V>
+xterm.*.translations: #override \n\
+Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+!Change the default meaning of <Alt> to the usual one 
+xterm*metaSendsEscape: true
+
