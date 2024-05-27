@@ -64,6 +64,8 @@ return {
 
         local servers = {
             clangd = {},
+            cmake = {},
+            marksman = {},
 
             lua_ls = {
                 -- cmd = {...},
