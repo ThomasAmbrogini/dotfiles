@@ -16,6 +16,8 @@ alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # Using 1 as the first number is supposted to give the lighter version of the
 # color. It also makes it bold, and using the bold ANSI code with the darker
 # version just makes the lighter one
+BOLD='\e[1m'
+
 RED='\e[1;31m'
 GREEN='\e[1;32m'
 BLUE='\e[1;34m'
@@ -27,5 +29,5 @@ STOP_COLOR='\e[0m'
 source /usr/share/git/completion/git-prompt.sh
 
 # Set the PS1 prompt
-PS1="${PURPLE}\W ${STOP_COLOR}\$(__git_ps1 '${BLUE}git:(${STOP_COLOR}${RED}%s${STOP_COLOR}${BLUE})')${STOP_COLOR}  "
+PS1="${PURPLE}\W ${STOP_COLOR}\$(__git_ps1 '${BLUE}git:(${STOP_COLOR}${RED}%s${STOP_COLOR}${BLUE})')${STOP_COLOR} ${PURPLE}${STOP_COLOR} "
 
