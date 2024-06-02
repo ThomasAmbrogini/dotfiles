@@ -18,13 +18,13 @@ alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # version just makes the lighter one
 BOLD='\e[1m'
 
-RED='\e[1;31m'
-GREEN='\e[1;32m'
-BLUE='\e[1;34m'
-PURPLE='\e[1;35m'
-CYAN='\e[1;36m'
+RED='\[\e[1;31m\]'
+GREEN='\[\e[1;32m\]'
+BLUE='\[\e[1;34m\]'
+PURPLE='\[\e[1;35m\]'
+CYAN='\[\e[1;36m\]'
 
-STOP_COLOR='\e[0m'
+STOP_COLOR='\[\e[0m\]'
 
 source /usr/share/git/completion/git-prompt.sh
 
