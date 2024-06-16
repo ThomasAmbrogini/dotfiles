@@ -66,7 +66,7 @@ return {
             clangd = {},
             cmake = {},
             marksman = {},
-
+            pylsp = {},
             lua_ls = {
                 -- cmd = {...},
                 -- filetypes = { ...},
