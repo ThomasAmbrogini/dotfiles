@@ -1,0 +1,41 @@
+{
+    "telemetry.telemetryLevel": "off",
+
+    /* Font */
+    "editor.fontFamily": "JuliaMonoNerdFontMono",
+    "editor.fontSize": 16,
+    "editor.fontWeight": "bold",
+
+    /* General */
+    "editor.detectIndentation": false,
+    "editor.renderWhitespace": "trailing",
+    "editor.lineNumbers": "relative",
+
+    /* Screen Readers */
+    "editor.accessibilitySupport": "off",
+    "editor.accessibilityPageSize": 1,
+
+    /* Auto closing */
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingComments": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+
+    /* Hiding code */
+    "editor.foldingHighlight": false,
+    "editor.folding": false,
+
+    /* Minimap */
+    "editor.minimap.enabled": false,
+
+    /* Trimmings */
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+
+    /* Startup page */
+    "workbench.startupEditor": "none",
+
+    /* Breadcrumbs */
+    "breadcrumbs.enabled": false,
+}
