@@ -10,6 +10,7 @@
     "editor.detectIndentation": false,
     "editor.renderWhitespace": "trailing",
     "editor.lineNumbers": "relative",
+    "editor.cursorSurroundingLines": 10,
 
     /* Screen Readers */
     "editor.accessibilitySupport": "off",
@@ -38,4 +39,101 @@
 
     /* Breadcrumbs */
     "breadcrumbs.enabled": false,
+
+    /* Vim extension */
+    "vim.enableNeovim": true,
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false
+    },
+    "vim.highlightedyank.enable": true,
+    "vim.leader": "<space>",
+
+    /* Normal mode keymaps */
+    "vim.normalModeKeyBindings": [
+        /* Bookmarks mappings */
+        {
+            "before": ["<leader>", "b", "m"],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": ["<leader>", "b", "c"],
+            "commands": [
+                "bookmarks.clear"
+            ]
+        },
+        {
+            "before": ["<leader>", "b", "p"],
+            "commands": [
+                "bookmarks.jumpToPrevious"
+            ]
+        },
+        {
+            "before": ["<leader>", "b", "n"],
+            "commands": [
+                "bookmarks.jumpToNext"
+            ]
+        },
+        {
+            "before": ["<leader>", "b", "l"],
+            "commands": [
+                "bookmarks.listFromAllFiles"
+            ]
+        },
+
+        /* Copy to unnamed register */
+        {
+            "before": [
+                "<leader>", "y"
+            ],
+            "after": [
+                "\"", "+", "y"
+            ],
+        },
+        /* Delete to unnamed register */
+        {
+            "before": [
+                "<leader>", "d"
+            ],
+            "after": [
+                "\"", "+", "d"
+            ],
+        },
+        /* Opening file explorer */
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.view.explorer"]
+        },
+
+        /* Open file */
+        {
+            "before": ["<leader>", "s", "f"],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+
+        {
+            "before": ["g", "r"],
+            "commands": ["editor.action.referenceSearch.trigger"]
+        },
+    ],
+
+    "vim.visualModeKeyBindings": [
+    ],
+
+    /* Insert mode keymaps */
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["k", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
 }
