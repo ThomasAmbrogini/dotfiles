@@ -1,0 +1,120 @@
+// Place your key bindings in this file to override the defaults
+[
+    /* Close file explorer with "space e" */
+    {
+        "key": "space e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+
+    /* Create splits */
+    {
+        "key": "alt+l",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "alt+h",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+
+    /* Navigate Splits */
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.navigateDown"
+    },
+
+    /* Navigate buffers */
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.nextEditor"
+    },
+
+    /* "<C-[>" works as escape */
+    {
+        "key": "ctrl+[",
+        "command": "workbench.action.closeQuickOpen",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "closeReferenceSearch",
+        "when": "inReferenceSearchEditor && !config.editor.stablePeek"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "closeReferenceSearch",
+        "when": "editorTextFocus && referenceSearchVisible && !config.editor.stablePeek || referenceSearchVisible && !config.editor.stablePeek && !inputFocus"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.closeTestPeek",
+        "when": "testing.isInPeek && !config.editor.stablePeek || testing.isPeekVisible && !config.editor.stablePeek"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.cancelOperation",
+        "when": "cancellableOperation"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.gotoNextSymbolFromResult.cancel",
+        "when": "hasSymbols"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.hideDropWidget",
+        "when": "dropWidgetVisible"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.hidePasteWidget",
+        "when": "pasteWidgetVisible"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "search.action.focusQueryEditorWidget",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "settings.action.clearSearchResults",
+        "when": "inSettingsEditor && inSettingsSearch"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "closeFindWidget",
+        "when": "editorFocus && findWidgetVisible && !isComposing"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "removeSecondaryCursors",
+        "when": "editorHasMultipleSelections && textInputFocus"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.cancelOperation",
+        "when": "cancellableOperation"
+    },
+]
