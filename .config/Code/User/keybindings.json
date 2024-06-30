@@ -43,11 +43,13 @@
 
     /* Navigate buffers */
     {
-        "key": "ctrl+m",
+        "key": "ctrl+p",
+        "when": "!inQuickOpen",
         "command": "workbench.action.previousEditor"
     },
     {
         "key": "ctrl+n",
+        "when": "!inQuickOpen",
         "command": "workbench.action.nextEditor"
     },
 
