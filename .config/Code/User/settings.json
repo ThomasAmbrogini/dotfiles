@@ -1,13 +1,16 @@
 {
     "telemetry.telemetryLevel": "off",
 
+    "window.menuBarVisibility": "compact",
+    "window.zoomLevel": -1,
+
     /* Font */
     "editor.fontFamily": "JuliaMonoNerdFontMono",
-    "editor.fontSize": 16,
-    "editor.fontWeight": "bold",
+    "editor.fontSize": 18,
+    "editor.fontWeight": "500",
 
     /* General */
-    "editor.detectIndentation": false,
+    //"editor.detectIndentation": false,
     "editor.renderWhitespace": "trailing",
     "editor.lineNumbers": "relative",
     "editor.cursorSurroundingLines": 10,
@@ -29,10 +32,6 @@
 
     /* Minimap */
     "editor.minimap.enabled": false,
-
-    /* Trimmings */
-    "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true,
 
     /* Startup page */
     "workbench.startupEditor": "none",
@@ -102,10 +101,14 @@
                 "\"", "+", "d"
             ],
         },
-        /* Opening file explorer */
+        /* file explorer */
         {
             "before": ["<leader>", "e"],
             "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["<leader>", "q", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
         },
 
         /* Open file */
