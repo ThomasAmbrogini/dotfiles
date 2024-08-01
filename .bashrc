@@ -31,6 +31,8 @@ else
     TERMINAL=xterm
 
     source /usr/share/git/completion/git-prompt.sh
+    source /usr/share/git/completion/git-completion.bash
+
     # Set the PS1 prompt
     PS1="${PURPLE}\W ${STOP_COLOR}\$(__git_ps1 '${BLUE}git:(${STOP_COLOR}${RED}%s${STOP_COLOR}${BLUE})')${STOP_COLOR} ${PURPLE}${STOP_COLOR} "
 fi
