@@ -8,6 +8,7 @@ return {
         local builtin = require("telescope.builtin")
         vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
         vim.keymap.set('n', '<leader>lg', builtin.live_grep, { desc = '[L]ive [G]rep' })
+        vim.keymap.set('n', '<leader>lb', builtin.buffers, { desc = 'Telescope buffers' })
 
         require("telescope").setup{
             defaults = {
