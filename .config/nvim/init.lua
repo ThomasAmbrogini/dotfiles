@@ -1,4 +1,4 @@
--- The mapleader has to be one of the first things to be set 
+-- The mapleader has to be one of the first things to be set
 -- To be sure they are defined first I will define them here
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
