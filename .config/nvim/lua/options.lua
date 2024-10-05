@@ -39,3 +39,6 @@ vim.opt.updatetime = 50
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
 
+vim.opt.list = true
+vim.opt.listchars:append("trail:·")
+
