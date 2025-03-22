@@ -1,0 +1,259 @@
+{
+  "geometry-of-main_window_geometry": {
+    "frame_geometry": {
+      "height": 1080,
+      "width": 1920,
+      "x": 0,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 1076,
+      "width": 1916,
+      "x": 2,
+      "y": 2
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 1076,
+      "width": 1916,
+      "x": 2,
+      "y": 2
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAB38AAAQ3AAAAAgAAAAIAAAd9AAAENQAAAAACAAAAB4AAAAACAAAAAgAAB30AAAQ1"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "InfoVision Optoelectronics (Kunshan) Co.,Ltd China",
+      "model": "",
+      "name": "eDP1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "local_storage": {
+    "search-bar-history-search-for-sc": [
+      "metadata",
+      "edit book",
+      "down",
+      "donw",
+      "page",
+      "page down",
+      "page donw",
+      "edit",
+      "rotate",
+      "rotate\\",
+      "]"
+    ]
+  },
+  "main_window_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAAAAAAAAPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawAAAAAA/////wAAAIoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAmgD///8AAAABAAACWAAABDT8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACDAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAPIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAAQ0AAAAFAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAANcA////AAAHfAAABDQAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+  },
+  "old_prefs_migrated": true,
+  "session_data": {
+    "controls_help_shown_count": 2,
+    "keyboard_shortcuts": {
+      "down": [
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "ArrowDown",
+          "metaKey": false,
+          "shiftKey": false
+        },
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "j",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "edit_book": [
+        {
+          "altKey": false,
+          "ctrlKey": true,
+          "key": "e",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "left": [
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "ArrowLeft",
+          "metaKey": false,
+          "shiftKey": false
+        },
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "h",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "metadata": [
+        {
+          "altKey": false,
+          "ctrlKey": true,
+          "key": "n",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "next_section": [
+        {
+          "altKey": false,
+          "ctrlKey": true,
+          "key": "PageDown",
+          "metaKey": false,
+          "shiftKey": false
+        },
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "]",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "pagedown": [
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": " ",
+          "metaKey": false,
+          "shiftKey": false
+        },
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "PageDown",
+          "metaKey": false,
+          "shiftKey": false
+        },
+        {
+          "altKey": false,
+          "ctrlKey": true,
+          "key": "d",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "pageup": [
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "PageUp",
+          "metaKey": false,
+          "shiftKey": false
+        },
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": " ",
+          "metaKey": false,
+          "shiftKey": true
+        },
+        {
+          "altKey": false,
+          "ctrlKey": true,
+          "key": "u",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "previous_section": [
+        {
+          "altKey": false,
+          "ctrlKey": true,
+          "key": "PageUp",
+          "metaKey": false,
+          "shiftKey": false
+        },
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "[",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "right": [
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "ArrowRight",
+          "metaKey": false,
+          "shiftKey": false
+        },
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "l",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "up": [
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "ArrowUp",
+          "metaKey": false,
+          "shiftKey": false
+        },
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "k",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ]
+    },
+    "lines_per_sec_auto": 0.8999999999999999,
+    "read_mode": "flow",
+    "standalone_font_settings": {},
+    "standalone_misc_settings": {
+      "remember_last_read": true,
+      "remember_window_geometry": false,
+      "save_annotations_in_ebook": true,
+      "singleinstance": false
+    },
+    "standalone_recently_opened": [
+      {
+        "authors": [
+          "Harris, Sarah, Harris, David",
+          "Sarah L. Harris"
+        ],
+        "key": "/home/thomas/Dropbox/calibre_library/Harris, Sarah, Harris, David/Digital Design and Computer Architec (2)/Digital Design and Computer Arc - Harris, Sarah, Harris, David.epub",
+        "pathtoebook": "/home/thomas/Dropbox/calibre_library/Harris, Sarah, Harris, David/Digital Design and Computer Architec (2)/Digital Design and Computer Arc - Harris, Sarah, Harris, David.epub",
+        "timestamp": "2025-03-22T11:07:06.406Z",
+        "title": "Digital Design and Computer Architecture"
+      }
+    ]
+  }
+}
