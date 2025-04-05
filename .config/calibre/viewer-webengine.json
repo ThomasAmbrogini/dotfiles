@@ -72,6 +72,11 @@
   "old_prefs_migrated": true,
   "session_data": {
     "controls_help_shown_count": 2,
+    "highlight_style": {
+      "kind": "color",
+      "type": "builtin",
+      "which": "yellow"
+    },
     "keyboard_shortcuts": {
       "down": [
         {
@@ -251,7 +256,7 @@
         ],
         "key": "/home/thomas/Dropbox/calibre_library/Harris, Sarah, Harris, David/Digital Design and Computer Architec (2)/Digital Design and Computer Arc - Harris, Sarah, Harris, David.epub",
         "pathtoebook": "/home/thomas/Dropbox/calibre_library/Harris, Sarah, Harris, David/Digital Design and Computer Architec (2)/Digital Design and Computer Arc - Harris, Sarah, Harris, David.epub",
-        "timestamp": "2025-03-22T11:07:06.406Z",
+        "timestamp": "2025-04-05T13:42:02.312Z",
         "title": "Digital Design and Computer Architecture"
       }
     ]
