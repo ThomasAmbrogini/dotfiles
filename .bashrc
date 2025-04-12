@@ -29,9 +29,8 @@ else
     # By setting the terminal variable, it is launched by $mod + Enter
     # combination
     TERMINAL=xterm
-
-    source /usr/share/git/completion/git-prompt.sh
-    source /usr/share/git/completion/git-completion.bash
+    [[ -f /usr/share/bash-completion/completions/git ]] && source /usr/share/bash-completion/completions/git
+    [[ -f /etc/bash_completion.d/git-prompt ]] && source /etc/bash_completion.d/git-prompt
 
     # Set the PS1 prompt
     PS1="${PURPLE}\W ${STOP_COLOR}\$(__git_ps1 '${BLUE}git:(${STOP_COLOR}${RED}%s${STOP_COLOR}${BLUE})')${STOP_COLOR} ${PURPLE}${STOP_COLOR} "
