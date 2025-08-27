@@ -19,6 +19,25 @@ return {
                         height = 0.99,
                     },
                 },
+                vimgrep_arguments = {
+                   "rg",
+                   "--color=never",
+                   "--no-heading",
+                   "--with-filename",
+                   "--line-number",
+                   "--column",
+                   "--smart-case",
+                   "--no-ignore-vcs",  -- Search inside .gitignore files
+               },
+               find_command = {
+                   'fd',
+                   '--type',
+                   'f',
+                   '--no-ignore-vcs',
+                   '--hidden',
+                   '--follow'
+               },
+
             },
         }
 
