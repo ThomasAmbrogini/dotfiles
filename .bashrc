@@ -36,5 +36,7 @@ else
     PS1="${PURPLE}\W ${STOP_COLOR}\$(__git_ps1 '${BLUE}git:(${STOP_COLOR}${RED}%s${STOP_COLOR}${BLUE})')${STOP_COLOR} ${PURPLE}${STOP_COLOR} "
 fi
 
-
 set -o vi
+
+eval "$(zoxide init bash)"
+
