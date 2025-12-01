@@ -38,5 +38,7 @@ fi
 
 set -o vi
 
-eval "$(zoxide init bash)"
+if [ $(which zoxide) ]; then
+    eval "$(zoxide init bash)"
+fi
 
