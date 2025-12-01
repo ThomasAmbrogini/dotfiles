@@ -37,6 +37,7 @@ else
 fi
 
 set -o vi
+bind "\C-l":"clear-display"
 
 if [ $(which zoxide) ]; then
     eval "$(zoxide init bash)"
