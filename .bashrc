@@ -43,3 +43,5 @@ if [ $(which zoxide) ]; then
     eval "$(zoxide init bash)"
 fi
 
+alias info="info --vi-keys"
+
