@@ -8,3 +8,6 @@ set print pretty on
 
 # It does not breaks into pages when a command has a lot of output
 set pagination off
+
+# GDB does not ask for confirmation of commands
+set confirm off
