@@ -4,3 +4,7 @@ set auto-load safe-path /
 # Prints on gdb.txt file all that happens on gdb console
 set logging enabled on
 
+set print pretty on
+
+# It does not breaks into pages when a command has a lot of output
+set pagination off
