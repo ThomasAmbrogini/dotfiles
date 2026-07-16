@@ -45,3 +45,11 @@ fi
 
 alias info="info --vi-keys"
 
+# Bind C-l for clearing the screen, this is needed if the vi mode is used.
+bind '"\C-l": clear-display'
+
+. "$HOME/.cargo/env"
+
+# Initialization for zoxide
+eval "$(zoxide init bash)"
+
