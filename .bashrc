@@ -32,8 +32,7 @@ else
     [[ -f /usr/share/bash-completion/completions/git ]] && source /usr/share/bash-completion/completions/git
     [[ -f /etc/bash_completion.d/git-prompt ]] && source /etc/bash_completion.d/git-prompt
 
-    # Set the PS1 prompt
-    PS1="${PURPLE}\W ${STOP_COLOR}\$(__git_ps1 '${BLUE}git:(${STOP_COLOR}${RED}%s${STOP_COLOR}${BLUE})')${STOP_COLOR} ${PURPLE}${STOP_COLOR} "
+    PS1="${BLUE}\u${GREEN}@\h${STOP_COLOR} ${PURPLE}\W ${STOP_COLOR}\$(__git_ps1 '${BLUE}git:(${STOP_COLOR}${RED}%s${STOP_COLOR}${BLUE})')${STOP_COLOR} ${PURPLE}${STOP_COLOR} "
 fi
 
 set -o vi
@@ -48,7 +47,7 @@ alias info="info --vi-keys"
 # Bind C-l for clearing the screen, this is needed if the vi mode is used.
 bind '"\C-l": clear-display'
 
+export PATH=$PATH:/$HOME/.local/bin
+
 # Initialization for zoxide
 eval "$(zoxide init bash)"
-
-export PATH=$PATH:/home/tambrogini/.local/bin
