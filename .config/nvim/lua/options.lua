@@ -45,3 +45,5 @@ vim.opt.listchars:append("trail:·")
 -- Sometimes the comments in cpp are considered as modelines creating errors.
 vim.opt.modeline = false
 
+vim.g.clipboard = 'osc52'
+
