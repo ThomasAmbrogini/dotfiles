@@ -25,10 +25,6 @@ alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 if [ -n "$WSL_DISTRO_NAME" ]; then
     source ~/.bashrc_wsl
 else
-    # The terminal variable is needed by i3 (in i3-sensible-terminal script).
-    # By setting the terminal variable, it is launched by $mod + Enter
-    # combination
-    TERMINAL=xterm
     [[ -f /usr/share/bash-completion/completions/git ]] && source /usr/share/bash-completion/completions/git
     [[ -f /etc/bash_completion.d/git-prompt ]] && source /etc/bash_completion.d/git-prompt
 

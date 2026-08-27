@@ -7,5 +7,7 @@
 
 xrandr --auto --output DP1 --left-of eDP1
 
+export TERMINAL=wezterm
+
 exec i3
 
