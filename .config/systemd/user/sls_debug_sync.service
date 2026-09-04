@@ -1,0 +1,15 @@
+[Unit]
+Description=Mirror sls_mini sources + ELF to the debug host
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+EnvironmentFile=%h/.config/sls_debug_sync.env
+ExecStart=%h/.local/bin/sls_debug_sync.sh ${DEST} ${SRC} ${TARGETS}
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+
