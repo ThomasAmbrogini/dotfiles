@@ -26,7 +26,7 @@ for t in "${_targets[@]}"; do
     if [[ "$t" == /* ]]; then WATCH_DIRS+=("$t"); else WATCH_DIRS+=("$SRC/$t"); fi
 done
 (( ${#WATCH_DIRS[@]} > 0 )) \
-    || { echo "TARGETS is empty (set it in $CONF)" >&2; exit 1; }
+    || { echo "TARGETS is empty" >&2; exit 1; }
 
 echo ${WATCH_DIRS}
 
@@ -36,10 +36,12 @@ log() {
 
 sync_now() {
     rsync \
+        --quiet \
         --archive \
         --delete \
         --include='build*/' \
         --include='build*/**/' \
+        --include='build*/*.json' \
         --include='build*/**/*.out' \
         --include='build*/**/*.map' \
         --exclude='build*/**' \
@@ -53,11 +55,25 @@ log "watching ${#WATCH_DIRS[@]} target dir(s) -> $DEST"
 sync_now
 
 while true; do
-    ev=$(inotifywait -q --format '%w%f' \
-        -e close_write,moved_to,delete \
+    ev=$(inotifywait -q --format '%e %w %f' \
+        -e create,close_write,moved_to,delete \
         "${WATCH_DIRS[@]}") \
         || { echo "cannot watch target dirs" >&2; exit 1; }
+
+    read -r event dir file <<< "$ev"
+
+    echo "Event ${event} on file ${file} has happened"
+
     mkdir -p "${WATCH_DIRS[@]}"
-    if [[ "$ev" == *.out ]]; then sync_now; fi
+
+    inotifywait -m -q --format '%e %w %f' -e delete,close_write,moved_to "${WATCH_DIRS[@]}" |
+        while read -r event dir file; do
+            [[ "${file}" == *.out ]] || continue
+            [[ "${dir}" =~ ^(.*/build_[^/]+) ]] || continue
+            build_dir="${BASH_REMATCH[1]}"
+            python3 "${SRC}/tools/fix_compile_commands.py" "${build_dir}/compile_commands.json" \
+                -f "${SRC}/tools/pathmap.txt" -o "${build_dir}/compile_commands.json" || log "fix_compile_commands failed"
+            sync_now || log "rsync failed"
+        done
 done
 
