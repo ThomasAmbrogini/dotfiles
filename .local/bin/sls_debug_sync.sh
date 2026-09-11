@@ -28,7 +28,7 @@ done
 (( ${#WATCH_DIRS[@]} > 0 )) \
     || { echo "TARGETS is empty" >&2; exit 1; }
 
-echo ${WATCH_DIRS}
+echo "Watch dirs: ${WATCH_DIRS}"
 
 log() {
     printf '[%(%H:%M:%S)T] %s\n' -1 "$*";
@@ -51,29 +51,34 @@ sync_now() {
 }
 
 mkdir -p "${WATCH_DIRS[@]}"
-log "watching ${#WATCH_DIRS[@]} target dir(s) -> $DEST"
 sync_now
 
 while true; do
-    ev=$(inotifywait -q --format '%e %w %f' \
-        -e create,close_write,moved_to,delete \
-        "${WATCH_DIRS[@]}") \
-        || { echo "cannot watch target dirs" >&2; exit 1; }
-
-    read -r event dir file <<< "$ev"
-
-    echo "Event ${event} on file ${file} has happened"
-
     mkdir -p "${WATCH_DIRS[@]}"
 
-    inotifywait -m -q --format '%e %w %f' -e delete,close_write,moved_to "${WATCH_DIRS[@]}" |
-        while read -r event dir file; do
-            [[ "${file}" == *.out ]] || continue
-            [[ "${dir}" =~ ^(.*/build_[^/]+) ]] || continue
-            build_dir="${BASH_REMATCH[1]}"
-            python3 "${SRC}/tools/fix_compile_commands.py" "${build_dir}/compile_commands.json" \
-                -f "${SRC}/.user/pathmap.txt" -o "${build_dir}/compile_commands.json" || log "fix_compile_commands failed"
-            sync_now || log "rsync failed"
-        done
+    exec {inotify_fd}< <(inotifywait -m -q --format '%e %w %f' \
+        -e delete,delete_self,close_write,moved_to "${WATCH_DIRS[@]}")
+    inotify_pid=$!
+
+    while read -r -u "${inotify_fd}" event dir file; do
+        if [[ "${event}" == *DELETE_SELF* ]]; then
+            break
+        fi
+
+        [[ "${file}" == *.out ]] || continue
+        [[ "${dir}" =~ ^(.*/build_[^/]+) ]] || continue
+        [[ "${event}" == *CLOSE_WRITE* ]] || continue
+
+        build_dir="${BASH_REMATCH[1]}"
+        echo "Build dir: ${build_dir}"
+
+        python3 "${SRC}/tools/fix_compile_commands.py" "${build_dir}/compile_commands.json" \
+            -f "${SRC}/.user/pathmap.txt" -o "${build_dir}/compile_commands.json" || log "fix_compile_commands failed"
+        sync_now || log "rsync failed"
+    done
+
+    kill "${inotify_pid}" 2>/dev/null
+    exec {inotify_fd}<&-
+
 done
 
