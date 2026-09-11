@@ -72,7 +72,7 @@ while true; do
             [[ "${dir}" =~ ^(.*/build_[^/]+) ]] || continue
             build_dir="${BASH_REMATCH[1]}"
             python3 "${SRC}/tools/fix_compile_commands.py" "${build_dir}/compile_commands.json" \
-                -f "${SRC}/tools/pathmap.txt" -o "${build_dir}/compile_commands.json" || log "fix_compile_commands failed"
+                -f "${SRC}/.user/pathmap.txt" -o "${build_dir}/compile_commands.json" || log "fix_compile_commands failed"
             sync_now || log "rsync failed"
         done
 done
