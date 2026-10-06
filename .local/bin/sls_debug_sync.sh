@@ -66,7 +66,7 @@ while true; do
         fi
 
         [[ "${file}" == *.out ]] || continue
-        [[ "${dir}" =~ ^(.*/build_[^/]+) ]] || continue
+        [[ "${dir}" =~ ^(.*/build-[^/]+) ]] || continue
         [[ "${event}" == *CLOSE_WRITE* ]] || continue
 
         build_dir="${BASH_REMATCH[1]}"
