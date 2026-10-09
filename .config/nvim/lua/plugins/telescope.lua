@@ -21,6 +21,8 @@ return {
                 },
                 vimgrep_arguments = {
                    "rg",
+                   "--hidden",
+                   "--glob=!.git",
                    "--color=never",
                    "--no-heading",
                    "--with-filename",
@@ -29,15 +31,18 @@ return {
                    "--smart-case",
                    "--no-ignore-vcs",  -- Search inside .gitignore files
                },
-               find_command = {
-                   'fd',
-                   '--type',
-                   'f',
-                   '--no-ignore-vcs',
-                   '--hidden',
-                   '--follow'
-               },
-
+            },
+            pickers = {
+                find_files = {
+                    find_command = {
+                        "fdfind",
+                        "--type", "f",
+                        "--no-ignore-vcs",
+                        "--hidden",
+                        "--follow",
+                        "--exclude", ".git",
+                    },
+                },
             },
         }
 
