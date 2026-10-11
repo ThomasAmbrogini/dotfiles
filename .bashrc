@@ -47,3 +47,15 @@ export PATH=$PATH:/$HOME/.local/bin
 
 # Initialization for zoxide
 eval "$(zoxide init bash)"
+
+function debug_asm() {
+    arm-none-eabi-objdump --disassemble \
+                          --source \
+                          --demangle \
+                          --no-show-raw-insn \
+                          --disassembler-color=extended \
+                          --visualize-jumps=extended-color \
+                          "$@" \
+        | less -FRX
+}
+
