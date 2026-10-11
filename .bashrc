@@ -59,3 +59,17 @@ function debug_asm() {
         | less -FRX
 }
 
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/thomas/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/thomas/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
